@@ -1,17 +1,17 @@
 class	Plant:
-	def	__init__(self, name, height, age):
+	def	__init__(self, name, height, old):
 		self.name = name
 		self.height = height
-		self.age = age
+		self.old = old
 	
 	def	grow(self):
 		self.height += 0.8
 
 	def	aged(self):
-		self.age += 1
+		self.old += 1
 
 	def	show(self):
-		print(f"{self.name}: {self.height:.1f}cm, {self.age} days old")
+		print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
 
 def		ft_plant_growth():
 	print("=== Garden Plant Growth ===")

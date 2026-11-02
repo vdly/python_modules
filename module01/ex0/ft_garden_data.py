@@ -1,11 +1,11 @@
 class	Plant:
-	def	__init__(self, name, height, age):
+	def	__init__(self, name, height, old):
 		self.name = name
 		self.height = height
-		self.age = age
+		self.old = old
 	
 	def	show(self):
-		print(f"{self.name}: {self.height}cm, {self.age} days old")
+		print(f"{self.name}: {self.height}cm, {self.old} days old")
 
 def	ft_garden_data():
 	print("=== Garden Plant Registry ===")
