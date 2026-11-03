@@ -1,32 +1,34 @@
-class	Plant:
-	def	__init__(self, name, height, old):
-		self.name = name
-		self.height = height
-		self.old = old
-	
-	def	grow(self):
-		self.height += 0.8
+class Plant:
+    def __init__(self, name, height, old):
+        self.name = name
+        self.height = height
+        self.old = old
 
-	def	aged(self):
-		self.old += 1
+    def grow(self):
+        self.height += 0.8
 
-	def	show(self):
-		print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
+    def aged(self):
+        self.old += 1
 
-def		ft_plant_growth():
-	print("=== Garden Plant Growth ===")
+    def show(self):
+        print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
 
-	rose = Plant("Rose", 25, 30)
 
-	day = 1
-	rose.show()
-	for day in range(1, 8):
-		print(f"=== Day {day} ===")
-		rose.aged()
-		rose.grow()
-		rose.show()
+def ft_plant_growth():
+    print("=== Garden Plant Growth ===")
 
-	total_growth = round(0.8 * day, 1)
-	print(f"Growth this week: {total_growth}cm")
-		
+    rose = Plant("Rose", 25, 30)
+
+    day = 1
+    rose.show()
+    for day in range(1, 8):
+        print(f"=== Day {day} ===")
+        rose.aged()
+        rose.grow()
+        rose.show()
+
+    total_growth = round(0.8 * day, 1)
+    print(f"Growth this week: {total_growth}cm")
+
+
 ft_plant_growth()
