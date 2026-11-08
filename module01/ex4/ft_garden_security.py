@@ -13,3 +13,10 @@ class Plant:
     def show(self):
         print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
 
+
+def ft_garden_security():
+
+
+
+if __name__ == "__main__":
+    ft_garden_security()

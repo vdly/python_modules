@@ -34,5 +34,5 @@ def ft_plant_factory():
     print("Created: ", end="")
     fern.show()
 
-
-ft_plant_factory()
+if __name__ == "__main__":
+    ft_plant_factory()
