@@ -7,7 +7,7 @@ class Plant:
     def grow(self):
         self.height += 0.8
 
-    def aged(self):
+    def age(self):
         self.old += 1
 
     def show(self):
@@ -23,7 +23,7 @@ def ft_plant_growth():
     rose.show()
     for day in range(1, 8):
         print(f"=== Day {day} ===")
-        rose.aged()
+        rose.age()
         rose.grow()
         rose.show()
 
