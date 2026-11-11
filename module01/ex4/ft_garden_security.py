@@ -4,7 +4,7 @@ class Plant:
         self._height = height
         self._old = old
 
-    #setter methods
+    # setter methods
     def set_height(self, height):
         if height > 0:
             self._height = height

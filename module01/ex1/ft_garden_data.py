@@ -1,6 +1,3 @@
-# from ft_plant_growth import ft_plant_growth
-import haha
-
 class Plant:
     def __init__(self, name, height, old):
         self.name = name

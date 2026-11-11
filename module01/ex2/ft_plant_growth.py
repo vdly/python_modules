@@ -30,5 +30,6 @@ def ft_plant_growth():
     total_growth = round(0.8 * day, 1)
     print(f"Growth this week: {total_growth}cm")
 
+
 if __name__ == "__main__":
     ft_plant_growth()
