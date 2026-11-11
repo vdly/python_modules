@@ -1,4 +1,4 @@
-def countdown(days, day):
+def countdown(days: int, day: int) -> None:
     print("Day ", day)
     if day != days:
         countdown(days, day + 1)
@@ -6,7 +6,7 @@ def countdown(days, day):
         return
 
 
-def ft_count_harvest_recursive():
+def ft_count_harvest_recursive() -> None:
     days = int(input("Days until harvest: "))
     day = 1
 

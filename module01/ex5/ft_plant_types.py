@@ -1,24 +1,24 @@
 class Plant:
-    def __init__(self, name, height, old):
+    def __init__(self, name: str, height: float, old: int):
         self.name = name
         self.height = height
         self.old = old
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
 
 
 class Flower(Plant):
-    def __init__(self, name, height, old, colour):
+    def __init__(self, name: str, height: float, old: int, colour: str):
         super().__init__(name, height, old)
         self.colour = colour
 
     bloomed = False
 
-    def bloom(self):
+    def bloom(self) -> None:
         self.bloomed = True
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
         print(f"Colour : {self.colour}")
         if (self.bloomed is True):
@@ -28,40 +28,41 @@ class Flower(Plant):
 
 
 class Tree(Plant):
-    def __init__(self, name, height, old, trunk_diameter):
+    def __init__(self, name: str, height: float, old: int, t_diameter: float):
         super().__init__(name, height, old)
-        self.trunk_diameter = trunk_diameter
+        self.t_diameter = t_diameter
 
-    def produce_shade(self):
+    def produce_shade(self) -> None:
         print(f"Tree {self.name} now produces a shade of {self.height:.1f} \
-cm long and {self.trunk_diameter:.1f}cm wide.")
+cm long and {self.t_diameter:.1f}cm wide.")
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
-        print(f"Trunk diameter : {self.trunk_diameter:.1f}cm")
+        print(f"Trunk diameter : {self.t_diameter:.1f}cm")
 
 
 class Vegetable(Plant):
-    def __init__(self, name, height, old, harvest_season, nutritional_value):
+    def __init__(self, name: str, height: float, old: int, harvest_szn: str,
+                 nutritional_value: int):
         super().__init__(name, height, old)
-        self.harvest_season = harvest_season
+        self.harvest_szn = harvest_szn
         self.nutritional_value = nutritional_value
 
     days = 20
 
-    def grow(self):
+    def grow(self) -> None:
         for day in range(self.days):
             self.nutritional_value += 1
             self.height += 2.1
             self.old += 1
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {self.height:.1f}cm, {self.old} days old")
-        print(f"Harvest season : {self.harvest_season}")
+        print(f"Harvest season : {self.harvest_szn}")
         print(f"Nutritional value : {self.nutritional_value}")
 
 
-def ft_plant_types():
+def ft_plant_types() -> None:
     print("=== Garden Plant Types ===")
 
     print("=== Flower")

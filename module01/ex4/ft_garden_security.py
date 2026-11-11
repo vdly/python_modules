@@ -1,18 +1,18 @@
 class Plant:
-    def __init__(self, name, height, old):
+    def __init__(self, name: str, height: float, old: int):
         self.name = name
         self._height = height
         self._old = old
 
     # setter methods
-    def set_height(self, height):
+    def set_height(self, height: float) -> None:
         if height > 0:
             self._height = height
         else:
             print("Error, height can't be negative")
             print("Height update rejected")
 
-    def set_age(self, age):
+    def set_age(self, age: int) -> None:
         if age > 0:
             self._old = age
         else:
@@ -20,17 +20,17 @@ class Plant:
             print("Age update rejected")
 
     # getter methods
-    def get_height(self):
+    def get_height(self) -> float:
         return self._height
 
-    def get_age(self):
+    def get_age(self) -> int:
         return self._old
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {self._height:.1f}cm, {self._old} days old")
 
 
-def ft_garden_security():
+def ft_garden_security() -> None:
     print("=== Garden Security System ===")
 
     rose = Plant("Rose", 15, 10)
