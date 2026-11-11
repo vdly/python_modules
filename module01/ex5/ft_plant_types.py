@@ -16,7 +16,6 @@ class Flower(Plant):
     bloomed = False
 
     def bloom(self):
-        print(f"[asking the {self.name} to bloom]")
         self.bloomed = True
 
     def show(self):
@@ -34,7 +33,6 @@ class Tree(Plant):
         self.trunk_diameter = trunk_diameter
 
     def produce_shade(self):
-        print(f"[asking the {self.name} to produce shade]")
         print(f"Tree {self.name} now produces a shade of {self.height:.1f} \
 cm long and {self.trunk_diameter:.1f}cm wide.")
 
@@ -52,7 +50,6 @@ class Vegetable(Plant):
     days = 20
 
     def grow(self):
-        print(f"[make {self.name} grow and age for {self.days} days] ")
         for day in range(self.days):
             self.nutritional_value += 1
             self.height += 2.1
@@ -70,17 +67,20 @@ def ft_plant_types():
     print("=== Flower")
     rose = Flower("Rose", 10, 30, "red")
     rose.show()
+    print(f"[asking the {rose.name} to bloom]")
     rose.bloom()
     rose.show()
 
     print("\n=== Tree")
     oak = Tree("Oak", 200, 365, 5)
     oak.show()
+    print(f"[asking the {oak.name} to produce shade]")
     oak.produce_shade()
 
     print("\n=== Vegetable")
     tomato = Vegetable("Tomato", 5, 10, "April", 0)
     tomato.show()
+    print(f"[make {tomato.name} grow and age for {tomato.days} days] ")
     tomato.grow()
     tomato.show()
 
