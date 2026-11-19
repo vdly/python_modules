@@ -13,14 +13,17 @@ def test_temprature() -> None:
             print(f"Input data is '{item}'")
             temp = input_temprature(item)
             if temp > 40:
-                raise ValueError(f"{temp}°C is too hot for plants (max 40°C)\n")
+                raise ValueError(f"{temp}°C is too hot for \
+plants (max 40°C)\n")
             elif temp < 0:
-                raise ValueError(f"{temp}°C is too cold for plants (min 0°C)\n")
+                raise ValueError(f"{temp}°C is too cold for \
+plants (min 0°C)\n")
         except ValueError as err:
             print(f"Caught input_temperature error: {err}\n")
         else:
-                print(f"Temprature is now {temp}°C\n")
+            print(f"Temprature is now {temp}°C\n")
     print("All test completed - program didn't crash!")
 
 
-test_temprature()
+if __name__ == "__main__":
+    test_temprature()
