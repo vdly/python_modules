@@ -14,19 +14,19 @@ def garden_operation(operation_number: int) -> None:
 def test_error_types() -> None:
     op_num = [0, 1, 2, 3, 4]
 
-    print("=== Garden Error Types Demo ===")
+    print("=== Garden Error Types Demo ===\n")
     for item in op_num:
         print(f"Testing operation {item}...")
         try:
             garden_operation(item)
         except ValueError as err:
-            print("Caught ValueError:", err)
+            print(f"Caught ValueError: {err}\n")
         except ZeroDivisionError as err:
-            print("Caught ZeroDivisionError:", err)
+            print(f"Caught ZeroDivisionError: {err}\n")
         except FileNotFoundError as err:
-            print("Caught FileNotFoundError:", err)
+            print(f"Caught FileNotFoundError: {err}\n")
         except TypeError as err:
-            print("Caught TypeError:", err)
+            print(f"Caught TypeError: {err}\n")
         else:
             print("Operation completed successfully")
     print("\nAll operations type tested successfully!")
