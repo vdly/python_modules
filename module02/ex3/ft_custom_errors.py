@@ -1,19 +1,16 @@
 class GardenError(Exception):
     def __init__(self, message: str = "Unknown garden error") -> None:
-        self.message = message
-        super().__init__(self.message)
+        super().__init__(message)
 
 
 class PlantError(GardenError):
     def __init__(self, message: str = "Unknown plant error") -> None:
-        self.message = message
-        super().__init__(self.message)
+        super().__init__(message)
 
 
 class WaterError(GardenError):
     def __init__(self, message: str = "Unknown water error") -> None:
-        self.message = message
-        super().__init__(self.message)
+        super().__init__(message)
 
 
 def wilt_check(plant: str, is_wilting: bool) -> None:
@@ -37,17 +34,19 @@ def custom_error() -> None:
     except PlantError as err:
         print(f"Caught PlantError: {err}\n")
 
+
     print("Testing WaterError...")
     try:
         water_check(10, 0)
     except WaterError as err:
         print(f"Caught WaterError: {err}\n")
 
+
 # Python isn't saying "catch only GardenError instances."
 # It's saying "catch GardenError AND any class that inherits from it."
     print("Testing catching all garden errors...")
     try:
-        wilt_check("Tomato", True)
+        wilt_check("tomato", True)
     except GardenError as err:
         print(f"Caught GardenError: {err}")
 
@@ -55,6 +54,8 @@ def custom_error() -> None:
         water_check(10, 0)
     except GardenError as err:
         print(f"Caught GardenError: {err}\n")
+
+    print("All custom error types work correctly!")
 
 
 if __name__ == "__main__":

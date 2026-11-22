@@ -29,7 +29,7 @@ def test_error_types() -> None:
             print(f"Caught TypeError: {err}\n")
         else:
             print("Operation completed successfully")
-    print("\nAll operations type tested successfully!")
+    print("\nAll error type tested successfully!")
 
 
 if __name__ == "__main__":
